@@ -13,4 +13,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    
+    <style name="ThemeOverlay.Search" parent="Theme.Catatan">
+
+        <item name="android:editTextColor">@color/ColorWhite</item>
+
+        <item name="android:textColorHint">@color/ColorGray</item>
+
+    </style>
+    
 </resources>
+
