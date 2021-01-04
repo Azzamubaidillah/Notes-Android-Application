@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/white"/>
+
+    <ImageView
+        android:id="@+id/imgDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_tick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@null"
+        android:fontFamily="@font/manrope_bold"
+        android:inputType="text"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintTop_toBottomOf="@+id/imgDone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/notes_title"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ColorGray"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/manrope_bold"
+        android:maxLines="1"
+
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/ColorGray"
+        android:textColorHint="@color/ColorGray"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNoteTitle" />
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTime">
+
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:background="@color/ColorBlue"
+            android:layout_marginStart="@dimen/_5sdp"/>
+
+        <EditText
+            android:id="@+id/etNoteSubitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/manrope_regular"
+            android:inputType="text"
+            android:hint="@string/notes_subtitle"
+            android:background="@null"
+            android:padding="@dimen/_10sdp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/ColorGray"
+            android:textSize="@dimen/_10ssp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNoteDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/manrope_regular"
+        android:background="@null"
+
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@+id/l1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/notes_desc"
+        android:textColor="@color/white"
+        android:textColorHint="@color/ColorGray"
+        android:inputType="textMultiLine"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
